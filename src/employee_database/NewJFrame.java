@@ -5,6 +5,7 @@
  */
 package employee_database;
 
+ 
 /**
  *
  * @author mathu
@@ -14,6 +15,8 @@ public class NewJFrame extends javax.swing.JFrame {
     /**
      * Creates new form NewJFrame
      */
+    
+    
     public NewJFrame() {
         initComponents();
     }
@@ -326,7 +329,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void AddButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddButtonMousePressed
         // TODO add your handling code here:
-        MyHashTable Hash = new MyHashTable(20);
+        
 
         if( AddButton.isEnabled() == true){
             
@@ -373,6 +376,7 @@ public class NewJFrame extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        MyHashTable Hash = new MyHashTable(5);
         
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

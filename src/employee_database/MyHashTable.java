@@ -1,3 +1,6 @@
+
+package employee_database;
+
 import java.util.*;
 
 
@@ -6,7 +9,7 @@ import java.util.*;
 public class MyHashTable {
 	
 	// buckets is an array of ArrayList.  Each item in an ArrayList is an EmployeeInfo object.
-	private ArrayList<EmployeeInfo>[] buckets;
+	private final ArrayList<EmployeeInfo>[] buckets;
 
 	
 	
@@ -65,15 +68,13 @@ public EmployeeInfo removeEmployee(int employeeNum) {
 	
 	
 	public void displayContents() {
-		for (int bNum = 0; bNum < buckets.length;bNum++){
-
-			for (int i = 0;i < buckets[bNum].size();i++){
-			System.out.println(buckets[bNum].get(i).getEmpNumber());
-		// Print the employee numbers for the employees stored in each bucket's ArrayList,
-		// starting with bucket 0, then bucket 1, and so on.
-			
-			}
-		}
+            for (ArrayList<EmployeeInfo> bucket : buckets) {
+                for (int i = 0; i < bucket.size(); i++) {
+                    System.out.println(bucket.get(i).getEmpNumber());
+                    // Print the employee numbers for the employees stored in each bucket's ArrayList,
+                    // starting with bucket 0, then bucket 1, and so on.
+                }
+            }
 
 	
 	} // end class MyHashTable 
