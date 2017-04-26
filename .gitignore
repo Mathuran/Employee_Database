@@ -26,3 +26,5 @@ hs_err_pid*
 build/classes/employee_database/NewJFrame$8.class
 *.class
 *.form
+build/classes/employee_database/NewJFrame$4.class
+build/classes/employee_database/NewJFrame$1.class
