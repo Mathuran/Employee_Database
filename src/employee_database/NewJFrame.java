@@ -27,7 +27,7 @@ public class NewJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        EmployeeButtonGroup = new javax.swing.ButtonGroup();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -35,13 +35,19 @@ public class NewJFrame extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        FName = new javax.swing.JTextField();
+        LName = new javax.swing.JTextField();
+        SexText = new javax.swing.JTextField();
+        WorkLocaText = new javax.swing.JTextField();
+        DeductionText = new javax.swing.JTextField();
+        FTEbutton = new javax.swing.JRadioButton();
+        PTEbutton = new javax.swing.JRadioButton();
+        ASalTextF = new javax.swing.JTextField();
+        WperYText = new javax.swing.JTextField();
+        HperWText = new javax.swing.JTextField();
+        HWageText = new javax.swing.JTextField();
+        AddButton = new javax.swing.JButton();
+        eNumText = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,7 +97,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1031, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 694, Short.MAX_VALUE)
             .addComponent(jScrollPane3)
         );
         jPanel2Layout.setVerticalGroup(
@@ -100,51 +106,103 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(295, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Archive", jPanel2);
 
-        jTextField2.setText("First Name");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        FName.setText("First Name");
+        FName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                FNameActionPerformed(evt);
             }
         });
 
-        jTextField3.setText("First Name");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        LName.setText("Last Name");
+        LName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                LNameActionPerformed(evt);
             }
         });
 
-        jTextField4.setText("Sex");
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        SexText.setText("Sex");
+        SexText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                SexTextActionPerformed(evt);
             }
         });
 
-        jTextField5.setText("Work Location");
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        WorkLocaText.setText("Work Location");
+        WorkLocaText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                WorkLocaTextActionPerformed(evt);
             }
         });
 
-        jTextField6.setText("Deductions");
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        DeductionText.setText("Deductions");
+        DeductionText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                DeductionTextActionPerformed(evt);
             }
         });
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("jRadioButton1");
+        EmployeeButtonGroup.add(FTEbutton);
+        FTEbutton.setText("Full Time Employee");
+        FTEbutton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                FTEbuttonMouseClicked(evt);
+            }
+        });
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("jRadioButton2");
+        EmployeeButtonGroup.add(PTEbutton);
+        PTEbutton.setText("Part Time Employee");
+        PTEbutton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PTEbuttonMouseClicked(evt);
+            }
+        });
+
+        ASalTextF.setText("Annual Salary");
+        ASalTextF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ASalTextFActionPerformed(evt);
+            }
+        });
+
+        WperYText.setText("Weeks per Year");
+        WperYText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                WperYTextActionPerformed(evt);
+            }
+        });
+
+        HperWText.setText("Hours per Week");
+        HperWText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HperWTextActionPerformed(evt);
+            }
+        });
+
+        HWageText.setText("Hourly Wage");
+        HWageText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HWageTextActionPerformed(evt);
+            }
+        });
+
+        AddButton.setText("Add");
+        AddButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                AddButtonMousePressed(evt);
+            }
+        });
+
+        eNumText.setText("Employee Number");
+        eNumText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eNumTextActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -154,34 +212,64 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(AddButton)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(FTEbutton)
+                                        .addComponent(PTEbutton))
+                                    .addGap(57, 57, 57)
+                                    .addComponent(ASalTextF))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(FName, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(LName, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(eNumText, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(200, 200, 200)
+                                .addComponent(HperWText, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(WperYText, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(HWageText, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(SexText, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(WorkLocaText, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
-                .addContainerGap(537, Short.MAX_VALUE))
+                        .addComponent(DeductionText, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(FName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DeductionText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SexText)
+                    .addComponent(eNumText)
+                    .addComponent(WorkLocaText))
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(FTEbutton)
+                    .addComponent(ASalTextF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton2)
-                .addContainerGap(367, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PTEbutton)
+                    .addComponent(HperWText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(WperYText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(HWageText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(AddButton)
+                .addGap(112, 112, 112))
         );
 
         jTabbedPane1.addTab("Add", jPanel1);
@@ -194,36 +282,98 @@ public class NewJFrame extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void FNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_FNameActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void LNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_LNameActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void SexTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SexTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_SexTextActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void WorkLocaTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WorkLocaTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_WorkLocaTextActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void DeductionTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeductionTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_DeductionTextActionPerformed
+
+    private void PTEbuttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PTEbuttonMouseClicked
+        // TODO add your handling code here:
+        ASalTextF.setVisible(false);
+        HWageText.setVisible(true);
+        HperWText.setVisible(true);
+        WperYText.setVisible(true);
+    }//GEN-LAST:event_PTEbuttonMouseClicked
+
+    private void FTEbuttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FTEbuttonMouseClicked
+        // TODO add your handling code here:
+        ASalTextF.setVisible(true);
+        HWageText.setVisible(false);
+        HperWText.setVisible(false);
+        WperYText.setVisible(false);
+    }//GEN-LAST:event_FTEbuttonMouseClicked
+
+    private void AddButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddButtonMousePressed
+        // TODO add your handling code here:
+        MyHashTable Hash = new MyHashTable(20);
+
+        if( AddButton.isEnabled() == true){
+            
+            if (PTEbutton.isEnabled() == true){
+                
+                /*
+                PartTimeEmployee PTE = new PartTimeEmployee(eNumText.getAction(),FName.getAction(),LName.getAction(),WorkLocaText.getAction(),
+                        DeductionText.getAction(),SexText.getAction(),HperWText.getAction(),WperYText.getAction(),HWageText.getAction());
+                Hash.addEmplyee(PTE); */
+            }else if (FTEbutton.isEnabled() == true){
+                /*
+                FullTimeEmployee FTE = new FullTimeEmployee(eNumText.getAction(),FName.getAction(),LName.getAction(),WorkLocaText.getAction(),
+                        DeductionText.getAction(),SexText.getAction(),ASalTextF.getAction());
+                Hash.addEmployee(FTE);
+                */
+            } else {
+            }
+            
+            System.out.println("button pressed");
+        }
+    }//GEN-LAST:event_AddButtonMousePressed
+
+    private void eNumTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eNumTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_eNumTextActionPerformed
+
+    private void ASalTextFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ASalTextFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ASalTextFActionPerformed
+
+    private void HWageTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HWageTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HWageTextActionPerformed
+
+    private void WperYTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WperYTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_WperYTextActionPerformed
+
+    private void HperWTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HperWTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HperWTextActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -246,6 +396,7 @@ public class NewJFrame extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -253,23 +404,31 @@ public class NewJFrame extends javax.swing.JFrame {
                 new NewJFrame().setVisible(true);
             }
         });
+                
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JTextField ASalTextF;
+    private javax.swing.JButton AddButton;
+    private javax.swing.JTextField DeductionText;
+    private javax.swing.ButtonGroup EmployeeButtonGroup;
+    private javax.swing.JTextField FName;
+    private javax.swing.JRadioButton FTEbutton;
+    private javax.swing.JTextField HWageText;
+    private javax.swing.JTextField HperWText;
+    private javax.swing.JTextField LName;
+    private javax.swing.JRadioButton PTEbutton;
+    private javax.swing.JTextField SexText;
+    private javax.swing.JTextField WorkLocaText;
+    private javax.swing.JTextField WperYText;
+    private javax.swing.JTextField eNumText;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
 }
