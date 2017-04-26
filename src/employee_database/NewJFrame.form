@@ -2,7 +2,7 @@
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
+    <Component class="javax.swing.ButtonGroup" name="EmployeeButtonGroup">
     </Component>
   </NonVisualComponents>
   <Properties>
@@ -32,7 +32,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
+          <Component id="jTabbedPane1" pref="293" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -53,7 +53,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane1" pref="517" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" pref="694" max="32767" attributes="0"/>
                   <Component id="jScrollPane3" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
@@ -218,37 +218,52 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="FName" min="-2" pref="82" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="LName" min="-2" pref="82" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="SexTextF" min="-2" pref="82" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="WorkLocationTextF" min="-2" pref="93" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="DeductionTextF" min="-2" pref="82" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="AddButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="FTEbutton" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="PTEbutton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="FTEbutton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="PTEbutton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                                          <Component id="ASalTextF" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="FName" min="-2" pref="82" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="LName" min="-2" pref="82" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="eNumText" min="-2" pref="114" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="HperWText" min="-2" pref="113" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="HperWTextF" min="-2" pref="102" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="WperYTextF" min="-2" pref="107" max="-2" attributes="0"/>
+                                      <Component id="WperYText" min="-2" pref="107" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="HWageTextF" min="-2" max="-2" attributes="0"/>
+                                      <Component id="HWageText" pref="86" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="ASalTextF" min="-2" pref="96" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="SexText" min="-2" pref="107" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="WorkLocaText" pref="0" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="DeductionText" pref="109" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
-                          <Component id="AddButton" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -259,9 +274,10 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="FName" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="LName" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="SexTextF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="WorkLocationTextF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="DeductionTextF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="DeductionText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="SexText" alignment="1" max="32767" attributes="0"/>
+                          <Component id="eNumText" alignment="3" max="32767" attributes="0"/>
+                          <Component id="WorkLocaText" alignment="3" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -271,13 +287,13 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="PTEbutton" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="HperWTextF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="WperYTextF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="HWageTextF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="HperWText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="WperYText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="HWageText" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="AddButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="69" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -299,34 +315,34 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LNameActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="SexTextF">
+            <Component class="javax.swing.JTextField" name="SexText">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Sex"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SexTextFActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SexTextActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="WorkLocationTextF">
+            <Component class="javax.swing.JTextField" name="WorkLocaText">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Work Location"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="WorkLocationTextFActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="WorkLocaTextActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="DeductionTextF">
+            <Component class="javax.swing.JTextField" name="DeductionText">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Deductions"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DeductionTextFActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DeductionTextActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JRadioButton" name="FTEbutton">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="buttonGroup1"/>
+                  <ComponentRef name="EmployeeButtonGroup"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Full Time Employee"/>
               </Properties>
@@ -337,7 +353,7 @@
             <Component class="javax.swing.JRadioButton" name="PTEbutton">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="buttonGroup1"/>
+                  <ComponentRef name="EmployeeButtonGroup"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Part Time Employee"/>
               </Properties>
@@ -349,26 +365,49 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Annual Salary"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ASalTextFActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="WperYTextF">
+            <Component class="javax.swing.JTextField" name="WperYText">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Weeks per Year"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="WperYTextActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="HperWTextF">
+            <Component class="javax.swing.JTextField" name="HperWText">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Hours per Week"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="HperWTextActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="HWageTextF">
+            <Component class="javax.swing.JTextField" name="HWageText">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Hourly Wage"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="HWageTextActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="AddButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Add"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="AddButtonMousePressed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="eNumText">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Employee Number"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eNumTextActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
