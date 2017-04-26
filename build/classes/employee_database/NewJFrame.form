@@ -53,7 +53,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane1" pref="517" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" pref="1031" max="32767" attributes="0"/>
                   <Component id="jScrollPane3" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
@@ -63,7 +63,7 @@
                       <Component id="jScrollPane1" min="-2" pref="94" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPane3" min="-2" pref="92" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="295" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -219,36 +219,20 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="FName" min="-2" pref="82" max="-2" attributes="0"/>
+                              <Component id="jTextField2" min="-2" pref="82" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="LName" min="-2" pref="82" max="-2" attributes="0"/>
+                              <Component id="jTextField3" min="-2" pref="82" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="SexTextF" min="-2" pref="82" max="-2" attributes="0"/>
+                              <Component id="jTextField4" min="-2" pref="82" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="WorkLocationTextF" min="-2" pref="93" max="-2" attributes="0"/>
+                              <Component id="jTextField5" min="-2" pref="82" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="DeductionTextF" min="-2" pref="82" max="-2" attributes="0"/>
+                              <Component id="jTextField6" min="-2" pref="82" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="FTEbutton" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="PTEbutton" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="HperWTextF" min="-2" pref="102" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="WperYTextF" min="-2" pref="107" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="HWageTextF" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="ASalTextF" min="-2" pref="96" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="AddButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioButton1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioButton2" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="537" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -257,117 +241,76 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="FName" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="LName" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="SexTextF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="WorkLocationTextF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="DeductionTextF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="FTEbutton" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ASalTextF" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="PTEbutton" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="HperWTextF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="WperYTextF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="HWageTextF" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="AddButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="69" max="32767" attributes="0"/>
+                      <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="367" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="FName">
+            <Component class="javax.swing.JTextField" name="jTextField2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="First Name"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FNameActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="LName">
+            <Component class="javax.swing.JTextField" name="jTextField3">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Last Name"/>
+                <Property name="text" type="java.lang.String" value="First Name"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LNameActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField3ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="SexTextF">
+            <Component class="javax.swing.JTextField" name="jTextField4">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Sex"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SexTextFActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField4ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="WorkLocationTextF">
+            <Component class="javax.swing.JTextField" name="jTextField5">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Work Location"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="WorkLocationTextFActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField5ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="DeductionTextF">
+            <Component class="javax.swing.JTextField" name="jTextField6">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Deductions"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DeductionTextFActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField6ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="FTEbutton">
+            <Component class="javax.swing.JRadioButton" name="jRadioButton1">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Full Time Employee"/>
+                <Property name="text" type="java.lang.String" value="jRadioButton1"/>
               </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="FTEbuttonMouseClicked"/>
-              </Events>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="PTEbutton">
+            <Component class="javax.swing.JRadioButton" name="jRadioButton2">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Part Time Employee"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PTEbuttonMouseClicked"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="ASalTextF">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Annual Salary"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="WperYTextF">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Weeks per Year"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="HperWTextF">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Hours per Week"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="HWageTextF">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Hourly Wage"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="AddButton">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Add"/>
+                <Property name="text" type="java.lang.String" value="jRadioButton2"/>
               </Properties>
             </Component>
           </SubComponents>
