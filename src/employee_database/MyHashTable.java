@@ -2,7 +2,6 @@ import java.util.*;
 
 
 
-
 public class MyHashTable {
 	
 	// buckets is an array of ArrayList.  Each item in an ArrayList is an EmployeeInfo object.

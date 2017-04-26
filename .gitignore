@@ -1,28 +1,48 @@
-bin/
-build/
-dist/
-nbproject/
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
 
-# Compiled class file
-*.class
+# Folder config file
+Desktop.ini
 
-# Log file
-*.log
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
-# Package files
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
 
-*.zip
-*.rar
-*.tar.gz
-*.class
+# Windows shortcuts
+*.lnk
 
-*.xml
-*.mf
+# =========================
+# Operating System Files
+# =========================
 
+# OSX
+# =========================
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-*.class
-build/classes/employee_database/NewJFrame$8.class
-*.class
-*.form
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+/nbproject/private/
