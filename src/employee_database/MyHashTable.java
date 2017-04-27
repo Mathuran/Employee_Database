@@ -9,7 +9,7 @@ import java.util.*;
 public class MyHashTable {
 	
 	// buckets is an array of ArrayList.  Each item in an ArrayList is an EmployeeInfo object.
-	private final ArrayList<EmployeeInfo>[] buckets;
+	private ArrayList<EmployeeInfo>[] buckets;
 
 	
 	
@@ -24,6 +24,8 @@ public class MyHashTable {
 		for (int i = 0; i < howManyBuckets; i++) {
 			buckets[i] = new ArrayList();  // Instantiate the ArrayList for bucket i.
 		}
+                
+                buckets[10].iterator();
 	}
 
 	
@@ -43,9 +45,13 @@ public class MyHashTable {
 	
 	
 	public EmployeeInfo searchEmployee(int employeeNum) {
+            
+           /* if (buckets[calcBucket(employeeNum)].iterator().getEmpNumber() == employeeNum){
+                
+            }
+            */
+            
 		for (int i = 0;i <= buckets[calcBucket(employeeNum)].size();i++){
-		
-		
 				if (buckets[calcBucket(employeeNum)].get(i).getEmpNumber()== employeeNum){
 					return (buckets[calcBucket(employeeNum)].get(i));
 				}

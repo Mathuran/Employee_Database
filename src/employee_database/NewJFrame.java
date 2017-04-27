@@ -5,6 +5,8 @@
  */
 package employee_database;
 
+import javax.swing.Action;
+
  
 /**
  *
@@ -329,22 +331,20 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void AddButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddButtonMousePressed
         // TODO add your handling code here:
-        
+                MyHashTable Hash = new MyHashTable(20);
+
 
         if( AddButton.isEnabled() == true){
             
             if (PTEbutton.isEnabled() == true){
-                
-                /*
-                PartTimeEmployee PTE = new PartTimeEmployee(eNumText.getAction(),FName.getAction(),LName.getAction(),WorkLocaText.getAction(),
-                        DeductionText.getAction(),SexText.getAction(),HperWText.getAction(),WperYText.getAction(),HWageText.getAction());
-                Hash.addEmplyee(PTE); */
+            
+                PartTimeEmployee PTE = new PartTimeEmployee([int]eNumText,FName,LName,[int]WorkLocaText,
+                [double]DeductionText,SexText,HperWText,WperYText,HWageText);
+                Hash.addEmployee(PTE); 
             }else if (FTEbutton.isEnabled() == true){
-                /*
                 FullTimeEmployee FTE = new FullTimeEmployee(eNumText.getAction(),FName.getAction(),LName.getAction(),WorkLocaText.getAction(),
                         DeductionText.getAction(),SexText.getAction(),ASalTextF.getAction());
                 Hash.addEmployee(FTE);
-                */
             } else {
             }
             
@@ -376,7 +376,6 @@ public class NewJFrame extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        MyHashTable Hash = new MyHashTable(5);
         
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

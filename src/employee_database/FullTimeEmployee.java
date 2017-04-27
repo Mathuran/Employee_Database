@@ -1,3 +1,4 @@
+package employee_database;
 
 public class FullTimeEmployee extends EmployeeInfo {
 	

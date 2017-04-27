@@ -1,3 +1,7 @@
+package employee_database;
+
+
+        
 public class PartTimeEmployee extends EmployeeInfo {
 //Attributes~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 int hoursPerWeek;
