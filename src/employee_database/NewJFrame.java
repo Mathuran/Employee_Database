@@ -6,6 +6,7 @@
 package employee_database;
 
 import javax.swing.Action;
+import javax.swing.table.DefaultTableModel;
 
  
 /**
@@ -36,13 +37,14 @@ public class NewJFrame extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        FTEtable = new javax.swing.JTable();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        PTEtable = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         FName = new javax.swing.JTextField();
         LName = new javax.swing.JTextField();
-        SexText = new javax.swing.JTextField();
         WorkLocaText = new javax.swing.JTextField();
         DeductionText = new javax.swing.JTextField();
         FTEbutton = new javax.swing.JRadioButton();
@@ -52,16 +54,14 @@ public class NewJFrame extends javax.swing.JFrame {
         HperWText = new javax.swing.JTextField();
         HWageText = new javax.swing.JTextField();
         AddButton = new javax.swing.JButton();
-        eNumText = new javax.swing.JTextField();
+        eNumFTxt = new javax.swing.JFormattedTextField();
+        Sex = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        FTEtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+
             },
             new String [] {
                 "First Name", "Last Name", "Sex", "Work Location", "Deductions", "Annual salary"
@@ -75,14 +75,11 @@ public class NewJFrame extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(FTEtable);
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        PTEtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "First Name", "Last Name", "Sex", "Work Location", "Deductions", "Hourly wage", "Hours per Week", "Weeks per Year"
@@ -96,26 +93,42 @@ public class NewJFrame extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane3.setViewportView(jTable2);
+        jScrollPane3.setViewportView(PTEtable);
+
+        jLabel1.setText("Full Time Employees");
+
+        jLabel2.setText("Part Time Employees");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 694, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 888, Short.MAX_VALUE)
             .addComponent(jScrollPane3)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Archive", jPanel2);
 
+        FName.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         FName.setText("First Name");
         FName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,6 +136,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
+        LName.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         LName.setText("Last Name");
         LName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,13 +144,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        SexText.setText("Sex");
-        SexText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SexTextActionPerformed(evt);
-            }
-        });
-
+        WorkLocaText.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         WorkLocaText.setText("Work Location");
         WorkLocaText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,6 +152,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
+        DeductionText.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         DeductionText.setText("Deductions");
         DeductionText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,6 +161,7 @@ public class NewJFrame extends javax.swing.JFrame {
         });
 
         EmployeeButtonGroup.add(FTEbutton);
+        FTEbutton.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         FTEbutton.setText("Full Time Employee");
         FTEbutton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -160,6 +170,7 @@ public class NewJFrame extends javax.swing.JFrame {
         });
 
         EmployeeButtonGroup.add(PTEbutton);
+        PTEbutton.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         PTEbutton.setText("Part Time Employee");
         PTEbutton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -167,6 +178,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
+        ASalTextF.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         ASalTextF.setText("Annual Salary");
         ASalTextF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -174,6 +186,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
+        WperYText.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         WperYText.setText("Weeks per Year");
         WperYText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,6 +194,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
+        HperWText.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         HperWText.setText("Hours per Week");
         HperWText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -188,6 +202,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
+        HWageText.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         HWageText.setText("Hourly Wage");
         HWageText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,6 +210,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
+        AddButton.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         AddButton.setText("Add");
         AddButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -202,12 +218,15 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        eNumText.setText("Employee Number");
-        eNumText.addActionListener(new java.awt.event.ActionListener() {
+        eNumFTxt.setText("Employee Number");
+        eNumFTxt.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        eNumFTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eNumTextActionPerformed(evt);
+                eNumFTxtActionPerformed(evt);
             }
         });
+
+        Sex.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other"}));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -217,51 +236,53 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(AddButton)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(2, 2, 2)
+                                .addComponent(AddButton)
+                                .addGap(287, 287, 287))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(eNumFTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 346, Short.MAX_VALUE)
+                                    .addComponent(FName))
+                                .addGap(18, 18, 18)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(DeductionText, javax.swing.GroupLayout.DEFAULT_SIZE, 346, Short.MAX_VALUE)
+                            .addComponent(LName))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Sex, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(FTEbutton)
-                                        .addComponent(PTEbutton))
-                                    .addGap(57, 57, 57)
-                                    .addComponent(ASalTextF))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(FName, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(LName, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(eNumText, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(200, 200, 200)
-                                .addComponent(HperWText, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(WperYText, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(PTEbutton)
+                                    .addComponent(FTEbutton))
                                 .addGap(18, 18, 18)
-                                .addComponent(HWageText, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(SexText, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(WperYText)
+                                    .addComponent(ASalTextF, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
-                                .addComponent(WorkLocaText, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
-                        .addGap(18, 18, 18)
-                        .addComponent(DeductionText, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
-                        .addContainerGap())))
+                                .addComponent(HperWText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(HWageText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(WorkLocaText, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 238, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Sex, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(FName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(DeductionText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SexText)
-                    .addComponent(eNumText)
-                    .addComponent(WorkLocaText))
+                    .addComponent(eNumFTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(WorkLocaText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(FTEbutton)
@@ -269,12 +290,12 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PTEbutton)
-                    .addComponent(HperWText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(WperYText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(HWageText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(HperWText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(HWageText, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addComponent(AddButton)
-                .addGap(112, 112, 112))
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Add", jPanel1);
@@ -287,7 +308,9 @@ public class NewJFrame extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -301,10 +324,6 @@ public class NewJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_LNameActionPerformed
 
-    private void SexTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SexTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SexTextActionPerformed
-
     private void WorkLocaTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WorkLocaTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_WorkLocaTextActionPerformed
@@ -315,18 +334,18 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void PTEbuttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PTEbuttonMouseClicked
         // TODO add your handling code here:
-        ASalTextF.setVisible(false);
-        HWageText.setVisible(true);
-        HperWText.setVisible(true);
-        WperYText.setVisible(true);
+        ASalTextF.setEnabled(false);
+        HWageText.setEnabled(true);
+        HperWText.setEnabled(true);
+        WperYText.setEnabled(true);
     }//GEN-LAST:event_PTEbuttonMouseClicked
 
     private void FTEbuttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FTEbuttonMouseClicked
         // TODO add your handling code here:
-        ASalTextF.setVisible(true);
-        HWageText.setVisible(false);
-        HperWText.setVisible(false);
-        WperYText.setVisible(false);
+        ASalTextF.setEnabled(true);
+        HWageText.setEnabled(false);
+        HperWText.setEnabled(false);
+        WperYText.setEnabled(false);
     }//GEN-LAST:event_FTEbuttonMouseClicked
 
     private void AddButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddButtonMousePressed
@@ -335,26 +354,38 @@ public class NewJFrame extends javax.swing.JFrame {
 
 
         if( AddButton.isEnabled() == true){
+            int eNum = Integer.parseInt(eNumFTxt.getText());
+            int workLocaTxt = Integer.parseInt(WorkLocaText.getText());
+            double deduc = Double.parseDouble(DeductionText.getText());
+            if (PTEbutton.isSelected() == true){
+                System.out.println("PTE");
+
+                int HperW = Integer.parseInt(HperWText.getText());
+                int WperY = Integer.parseInt(WperYText.getText());
+                double wage = Double.parseDouble(HWageText.getText());
             
-            if (PTEbutton.isEnabled() == true){
-            
-                PartTimeEmployee PTE = new PartTimeEmployee([int]eNumText,FName,LName,[int]WorkLocaText,
-                [double]DeductionText,SexText,HperWText,WperYText,HWageText);
+                PartTimeEmployee PTE = new PartTimeEmployee(eNum,FName.getText(), LName.getText(),workLocaTxt,deduc,Sex.getName(),HperW, WperY, wage);
                 Hash.addEmployee(PTE); 
-            }else if (FTEbutton.isEnabled() == true){
-                FullTimeEmployee FTE = new FullTimeEmployee(eNumText.getAction(),FName.getAction(),LName.getAction(),WorkLocaText.getAction(),
-                        DeductionText.getAction(),SexText.getAction(),ASalTextF.getAction());
+                
+                DefaultTableModel model = (DefaultTableModel) PTEtable.getModel();
+                model.addRow(new Object[]{FName.getText(), LName.getText(),Sex.getName(),workLocaTxt,deduc,HperW, WperY, wage});
+                
+            }else if (FTEbutton.isSelected() == true){
+               System.out.println("FTE");
+
+                double aSal = Double.parseDouble(ASalTextF.getText());
+                
+                FullTimeEmployee FTE = new FullTimeEmployee(eNum,FName.getText(), LName.getText(),workLocaTxt,deduc,Sex.getName(),aSal);
                 Hash.addEmployee(FTE);
+                
+                DefaultTableModel model = (DefaultTableModel) FTEtable.getModel();
+                model.addRow(new Object[]{FName.getText(), LName.getText(),Sex.getName(),workLocaTxt,deduc,aSal});
             } else {
             }
             
             System.out.println("button pressed");
         }
     }//GEN-LAST:event_AddButtonMousePressed
-
-    private void eNumTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eNumTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_eNumTextActionPerformed
 
     private void ASalTextFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ASalTextFActionPerformed
         // TODO add your handling code here:
@@ -371,6 +402,10 @@ public class NewJFrame extends javax.swing.JFrame {
     private void HperWTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HperWTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_HperWTextActionPerformed
+
+    private void eNumFTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eNumFTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_eNumFTxtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -418,20 +453,22 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.ButtonGroup EmployeeButtonGroup;
     private javax.swing.JTextField FName;
     private javax.swing.JRadioButton FTEbutton;
+    private javax.swing.JTable FTEtable;
     private javax.swing.JTextField HWageText;
     private javax.swing.JTextField HperWText;
     private javax.swing.JTextField LName;
     private javax.swing.JRadioButton PTEbutton;
-    private javax.swing.JTextField SexText;
+    private javax.swing.JTable PTEtable;
+    private javax.swing.JComboBox<String> Sex;
     private javax.swing.JTextField WorkLocaText;
     private javax.swing.JTextField WperYText;
-    private javax.swing.JTextField eNumText;
+    private javax.swing.JFormattedTextField eNumFTxt;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
     // End of variables declaration//GEN-END:variables
 }

@@ -23,9 +23,7 @@ public class MyHashTable {
 		// For each element in the array, instantiate its ArrayList.
 		for (int i = 0; i < howManyBuckets; i++) {
 			buckets[i] = new ArrayList();  // Instantiate the ArrayList for bucket i.
-		}
-                
-                buckets[10].iterator();
+                } 
 	}
 
 	

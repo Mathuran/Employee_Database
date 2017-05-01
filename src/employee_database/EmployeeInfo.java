@@ -1,4 +1,4 @@
-package employee_database;
+package employee_database; 
 
 public class EmployeeInfo{
 
@@ -6,7 +6,7 @@ public class EmployeeInfo{
     private int empNumber;
     private String firstName;
     private String lastName;
-    private int sex; //allows the different obejcts to be linked right in tree
+    private String sex; //allows the different obejcts to be linked right in tree
     private int workLocation;
     protected double deductions;
 //Constructors~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
@@ -14,7 +14,7 @@ public class EmployeeInfo{
     }
 
 
-    public EmployeeInfo (int sNumber,String fName, String lName,int wL, double d, int s){ 
+    public EmployeeInfo (int sNumber,String fName, String lName,int wL, double d, String s){ 
 	empNumber = sNumber;
 	firstName = fName;
 	lastName = lName;
@@ -36,6 +36,15 @@ public class EmployeeInfo{
 
     public String getLastName (){
 	return (lastName);
+    }
+    public String getSex (){
+	return (sex);
+    }
+    public int getWorklocation (){
+	return (workLocation);
+    }
+    public double getDeductions (){
+	return (deductions);
     }
 
 //Setters~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -65,6 +74,15 @@ void setEmpNumber (int sN){
 
     void setLastName (String lN){
     	lastName = lN;
+    }
+      void setSex (String s){
+    	sex = s;
+    }
+      void setWorkLocation (int wL){
+    	workLocation = wL;
+    }
+      void setDeductions (double d){
+    	deductions = d;
     }
     
 }
