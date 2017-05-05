@@ -6,7 +6,7 @@ public class FullTimeEmployee extends EmployeeInfo {
 double annualSalary; 
 //Constructors~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	public FullTimeEmployee (int eN,String fN, String lN,int wL,double D,String s, double aS){
+	public FullTimeEmployee (int eN,String fN, String lN,String wL,double D,String s, double aS){
             super (eN,fN,lN,wL,D,s);
             annualSalary = aS;
 	}

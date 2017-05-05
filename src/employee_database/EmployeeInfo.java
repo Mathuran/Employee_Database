@@ -7,14 +7,14 @@ public class EmployeeInfo{
     private String firstName;
     private String lastName;
     private String sex; //allows the different obejcts to be linked right in tree
-    private int workLocation;
+    private String workLocation;
     protected double deductions;
 //Constructors~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
     public EmployeeInfo (){ //Neutral Constructor
     }
 
 
-    public EmployeeInfo (int sNumber,String fName, String lName,int wL, double d, String s){ 
+    public EmployeeInfo (int sNumber,String fName, String lName,String wL, double d, String s){ 
 	empNumber = sNumber;
 	firstName = fName;
 	lastName = lName;
@@ -40,7 +40,7 @@ public class EmployeeInfo{
     public String getSex (){
 	return (sex);
     }
-    public int getWorklocation (){
+    public String getWorklocation (){
 	return (workLocation);
     }
     public double getDeductions (){
@@ -78,7 +78,7 @@ void setEmpNumber (int sN){
       void setSex (String s){
     	sex = s;
     }
-      void setWorkLocation (int wL){
+      void setWorkLocation (String wL){
     	workLocation = wL;
     }
       void setDeductions (double d){

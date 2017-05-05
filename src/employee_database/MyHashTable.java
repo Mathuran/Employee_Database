@@ -2,8 +2,9 @@
 package employee_database;
 
 import java.util.*;
-
-
+import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 
 public class MyHashTable {
@@ -44,11 +45,6 @@ public class MyHashTable {
 	
 	public EmployeeInfo searchEmployee(int employeeNum) {
             
-           /* if (buckets[calcBucket(employeeNum)].iterator().getEmpNumber() == employeeNum){
-                
-            }
-            */
-            
 		for (int i = 0;i <= buckets[calcBucket(employeeNum)].size();i++){
 				if (buckets[calcBucket(employeeNum)].get(i).getEmpNumber()== employeeNum){
 					return (buckets[calcBucket(employeeNum)].get(i));
@@ -79,7 +75,35 @@ public EmployeeInfo removeEmployee(int employeeNum) {
                     // starting with bucket 0, then bucket 1, and so on.
                 }
             }
+        }
+
+            
+public void exportContents()throws Exception {
+     String csvFile;
+            csvFile = "/Users/Martin/desktop/EmployeeDatabase.csv";
+            FileWriter writer = new FileWriter(csvFile);
+                    
+                for (ArrayList<EmployeeInfo> bucket : buckets) {
+                    for (int i = 0; i < bucket.size(); i++) {
+                       
+                        if (bucket.get(i)instanceof PartTimeEmployee){
+                            FileProtocolUtil.writeLine(writer,Arrays.asList("P",Integer.toString(bucket.get(i).getEmpNumber()),bucket.get(i).getFirstName(), bucket.get(i).getLastName(), bucket.get(i).getSex(),Double.toString(((PartTimeEmployee) bucket.get(i)).calcNetAnnualIncome())));
+			}
+
+                        else {
+                           FileProtocolUtil.writeLine(writer,Arrays.asList("F",Integer.toString(bucket.get(i).getEmpNumber()),bucket.get(i).getFirstName(), bucket.get(i).getLastName(), bucket.get(i).getSex(),Double.toString(((FullTimeEmployee) bucket.get(i)).calcNetAnnualIncome())));
+                            }
+                        
+                        //FileProtocolUtil.writeLine(writer, Arrays.asList(Integer.toString(bucket.get(i).getEmpNumber()),bucket.get(i).getFirstName(), bucket.get(i).getLastName(), bucket.get(i).getSex()));
+                        
+                        //bucket.get(i).getEmpNumber();
+                        // Print the employee numbers for the employees stored in each bucket's ArrayList,
+                        // starting with bucket 0, then bucket 1, and so on.
+                    }
+                }
+                writer.flush();
+               // writer.close();
+            }
 
 	
-	} // end class MyHashTable 
-}
+} // end class MyHashTable 

@@ -8,7 +8,7 @@ int hoursPerWeek;
 int weeksPerYear;
 double hourlyWage; 
 //Constructors~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	public PartTimeEmployee (int eN,String fN, String lN,int wL,double D,String s,int hPw, int wPy, double hW){
+	public PartTimeEmployee (int eN,String fN, String lN,String wL,double D,String s,int hPw, int wPy, double hW){
 		super (eN,fN,lN,wL,D,s);
 		hoursPerWeek = hPw;
 		weeksPerYear = wPy;
