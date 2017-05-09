@@ -21,4 +21,13 @@ public double calcNetAnnualIncome(){
 	return (hourlyWage*weeksPerYear*hoursPerWeek*(1-this.getDeductions()));
 	
 }
+public int getHoursPerWeek(){
+    return hoursPerWeek;
+}
+public int getWeeksPerYear(){
+    return weeksPerYear;
+}
+public double getHourlyWage(){
+    return hourlyWage;
+}
 }

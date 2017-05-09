@@ -15,4 +15,9 @@ public double calcNetAnnualIncome(){
     double salary = annualSalary * (1-this.getDeductions());
 	return(salary);
 }
+
+public double getAnnualSalary(){
+    return annualSalary;
+}
+
 }
